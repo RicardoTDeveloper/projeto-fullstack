@@ -1,0 +1,11 @@
+@localhost = localhost
+@port = 3333
+GET http://{{localhost}}:{{port}} HTTP/1.1
+
+###
+
+GET http://{{localhost}}:{{port}}/sessions HTTP/1.1
+
+###
+
+POST 
