@@ -1,0 +1,58 @@
+
+.container{
+    margin-top: 30px;
+}
+
+.title{
+    font-size: 20px;
+    color: #444;
+    padding: 20px;
+    margin-bottom: 15px;
+}
+
+.bold{
+    font-weight: bold;
+}
+
+.list{
+    padding-left: 15px;
+}
+
+.listItem{
+    padding-right: 15px
+}
+
+.thumbnail{
+    width: 200px;
+    height: 120px;
+    resize-mode: cover;
+    border-radius: 2px;
+}
+
+.company{
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-top: 10px;
+}
+
+.price{
+    font-size: 15px;
+    color: #999;
+    margin-top: 5px;
+}
+
+.button{
+    height: 42px;
+    background-color: #f05a5b;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2px;
+    margin-top: 15px;
+}
+
+.buttonText{
+    color: #fff;
+    font-weight: bold;
+    font-size: 15px;
+}
