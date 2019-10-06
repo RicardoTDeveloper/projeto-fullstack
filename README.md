@@ -1,2 +1,2 @@
-# learning-react
-Semana OmniStack NodeJS/ReactJS/ReactNative
+# Projeto FullStack
+Aplicação completa utilizando a stack NodeJS/ReactJS/ReactNative
