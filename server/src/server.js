@@ -2,13 +2,13 @@ const express = require('express')
 const mongoose = require('mongoose')
 const cors = require('cors')
 const path = require('path')
-
+const dotenv = require('dotenv').config()
 
 const routes = require('./routes')
 
 const app = express();
 
-mongoose.connect('mongodb+srv://omnistack:omnistack@cluster0-dpxwj.mongodb.net/bd_react?retryWrites=true&w=majority', {
+mongoose.connect(process.env.DB_HOST, {
     useNewUrlParser: true,
     useUnifiedTopology: true
 })
