@@ -17,6 +17,10 @@ const upload = multer(uploadConfig)
 // req.body = Acessar corpo da requisição (para criação, edição)
 // req.headers = Acessar Header da requisição.
 
+routes.get('/', (req, res) => {
+    res.send('API working!')
+})
+
 routes.post('/sessions', SessionController.store)
 
 routes.get('/spots', SpotController.index)

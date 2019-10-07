@@ -15,7 +15,7 @@
     "nodemon": "^1.19.3"
   },
   "scripts": {
-    "dev": "node src/server.js"
+    "start": "node src/server.js"
   },
   "keywords": [],
   "author": "",
