@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/projeto-fullstack/static/css/main.8e1b1368.chunk.css",
-    "main.js": "/projeto-fullstack/static/js/main.70952ba3.chunk.js",
-    "main.js.map": "/projeto-fullstack/static/js/main.70952ba3.chunk.js.map",
+    "main.js": "/projeto-fullstack/static/js/main.3465cbde.chunk.js",
+    "main.js.map": "/projeto-fullstack/static/js/main.3465cbde.chunk.js.map",
     "runtime-main.js": "/projeto-fullstack/static/js/runtime-main.17219d2a.js",
     "runtime-main.js.map": "/projeto-fullstack/static/js/runtime-main.17219d2a.js.map",
-    "static/js/2.e33c5414.chunk.js": "/projeto-fullstack/static/js/2.e33c5414.chunk.js",
-    "static/js/2.e33c5414.chunk.js.map": "/projeto-fullstack/static/js/2.e33c5414.chunk.js.map",
+    "static/js/2.ab604395.chunk.js": "/projeto-fullstack/static/js/2.ab604395.chunk.js",
+    "static/js/2.ab604395.chunk.js.map": "/projeto-fullstack/static/js/2.ab604395.chunk.js.map",
     "index.html": "/projeto-fullstack/index.html",
-    "precache-manifest.c2bf5a22eb27bfae6db0891ce99fa122.js": "/projeto-fullstack/precache-manifest.c2bf5a22eb27bfae6db0891ce99fa122.js",
+    "precache-manifest.cf45846314cd07c30f6f1946f3884cf5.js": "/projeto-fullstack/precache-manifest.cf45846314cd07c30f6f1946f3884cf5.js",
     "service-worker.js": "/projeto-fullstack/service-worker.js",
     "static/css/main.8e1b1368.chunk.css.map": "/projeto-fullstack/static/css/main.8e1b1368.chunk.css.map",
     "static/media/App.css": "/projeto-fullstack/static/media/background.83252e0a.jpg",
@@ -17,8 +17,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.17219d2a.js",
-    "static/js/2.e33c5414.chunk.js",
+    "static/js/2.ab604395.chunk.js",
     "static/css/main.8e1b1368.chunk.css",
-    "static/js/main.70952ba3.chunk.js"
+    "static/js/main.3465cbde.chunk.js"
   ]
 }
