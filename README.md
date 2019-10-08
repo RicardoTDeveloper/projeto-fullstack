@@ -10,6 +10,6 @@ Projeto chamado como AirCnC, tem sua regra de negócio definida em dois público
 
 Assim as empresas disponibilizam seu espaço para os programadores (chamado Spot), e os mesmos através do aplicativo mobile, realizam sua reserva.
 
-> **Acesse:**  https://ricardotdeveloper.github.io/projeto-fullstack/  
+**Acesse:**  https://ricardotdeveloper.github.io/projeto-fullstack/  
 > 
 Para ter acesso a Aplicação Web e Mobile.

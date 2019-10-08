@@ -1,74 +1,99 @@
-import React, {useState, useMemo} from 'react'
+import React, { useState, useMemo } from 'react'
 import api from '../../services/api'
+
 
 import camera from '../../assets/camera.svg'
 import './style.css'
 
-export default function New({history}) {
+export default function New({ history }) {
     const [thumbnail, setThumnail] = useState(null);
     const [company, setCompany] = useState('');
     const [techs, setTechs] = useState('');
     const [price, setPrice] = useState('');
 
+    const [previewimg, setPreviewimg] = useState('');
+
+    // Image tratamento
     const preview = useMemo(() => {
 
-        return thumbnail ? URL.createObjectURL(thumbnail) : null;
+        return previewimg ? URL.createObjectURL(previewimg) : null;
 
-    }, [thumbnail])
+    }, [previewimg])
+
+    
+    function handleImageChange(imageaqui) {
+
+        setPreviewimg(imageaqui)
+
+        let file = imageaqui;
+        let reader = new FileReader();
+        reader.readAsDataURL(file);
+
+       reader.onloadend = function () {
+        setThumnail(reader.result)
+
+        }
+
+      }
 
     async function handleSubmit(event) {
         event.preventDefault();
 
-        const data = new FormData();
+        // const data = new FormData();
         const user_id = localStorage.getItem('user')
 
-        data.append('thumbnail', thumbnail)
-        data.append('company', company)
-        data.append('techs', techs)
-        data.append('price', price)
+        // data.append('thumbnail', thumbnail)
+        // data.append('company', company)
+        // data.append('techs', techs)
+        // data.append('price', price)
 
-        await api.post('/spots', data, {
-            headers: {user_id}
+        await api.post('/spots', {
+            thumbnail: thumbnail,
+            company: company,
+            techs: techs,
+            price: price,
+        }, {
+            headers: { user_id }
         })
 
         history.push('/dashboard')
 
     }
-    
+
     return (
         <form onSubmit={handleSubmit}>
 
-            <label id="thumbnail" 
-                style={{ backgroundImage: `url(${preview})` }} 
+            <label id="thumbnail"
+                style={{ backgroundImage: `url(${preview})` }}
                 className={thumbnail ? 'has-thumbnail' : ''}  >
-                <input type="file" onChange={event => setThumnail(event.target.files[0])}/>
+                <input type="file" onChange={event => handleImageChange(event.target.files[0])} />
                 <img src={camera} alt="Select img" />
             </label>
 
             <label htmlFor="company">EMPRESA *</label>
-            <input 
-            type="text" 
-            placeholder="Sua empresa incrível" 
-            value={company} 
-            onChange={event => setCompany(event.target.value)}
+            <input
+                type="text"
+                placeholder="Sua empresa incrível"
+                value={company}
+                onChange={event => setCompany(event.target.value)}
             />
 
             <label htmlFor="techs">TECNOLOGIAS * <span>(separadas por vírgulas)</span></label>
-            <input 
-            type="text" 
-            placeholder="Quais tecnologias usam?" 
-            value={techs} 
-            onChange={event => setTechs(event.target.value)}
+            <input
+                type="text"
+                placeholder="Quais tecnologias usam?"
+                value={techs}
+                onChange={event => setTechs(event.target.value)}
             />
 
             <label htmlFor="price">VALOR DA DIARIA * <span>(em branco para GRATUITO)</span></label>
-            <input 
-            type="text" 
-            placeholder="Valor cobrado por dia" 
-            value={price} 
-            onChange={event => setPrice(event.target.value)}
+            <input
+                type="text"
+                placeholder="Valor cobrado por dia"
+                value={price}
+                onChange={event => setPrice(event.target.value)}
             />
-            
+
             <button type="submit" className="btn">Cadastrar</button>
 
         </form>

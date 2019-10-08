@@ -24,7 +24,7 @@ routes.get('/', (req, res) => {
 routes.post('/sessions', SessionController.store)
 
 routes.get('/spots', SpotController.index)
-routes.post('/spots', upload.single('thumbnail') , SpotController.store)
+routes.post('/spots', SpotController.store) //upload.single('thumbnail') ,
 
 routes.get('/dashboard', DashboardController.show)
 
