@@ -5,7 +5,7 @@ import {SafeAreaView, ScrollView, Image , AsyncStorage} from 'react-native'
 import styles from './list.scss'
 import logo from '../../assets/logo.png'
 import SpotList from '../../components/SpotList'
-
+import Logout from '../../components/ButtonLogoff'
 
 export default function List(){
 
@@ -19,14 +19,15 @@ export default function List(){
     }, [])
 
     return (
-        <SafeAreaView style={styles.container}>
+        <ScrollView style={styles.container}>
             <Image style={styles.logo} source={logo}></Image>
             
-            <ScrollView>
             {techs.map(tech => <SpotList key={tech} tech={tech}></SpotList>)}
-            </ScrollView>
+
+            <Logout></Logout>
+
            
-        </SafeAreaView>
+        </ScrollView>
     );
 
 }

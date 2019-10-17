@@ -20,7 +20,7 @@ export default function New({ history }) {
 
     }, [previewimg])
 
-    
+
     function handleImageChange(imageaqui) {
 
         setPreviewimg(imageaqui)
@@ -31,7 +31,7 @@ export default function New({ history }) {
 
        reader.onloadend = function () {
         setThumnail(reader.result)
-
+        
         }
 
       }

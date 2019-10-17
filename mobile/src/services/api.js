@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 const api = axios.create({
-    baseURL: 'http://2184b768.ngrok.io/',
+    baseURL: 'https://api-nodejs-aircnc.azurewebsites.net/',
 })
 
 export default api; 

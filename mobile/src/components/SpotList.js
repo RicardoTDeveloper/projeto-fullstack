@@ -33,7 +33,7 @@ function SpotList({tech, navigation}) {
         <View style={styles.container}>
             <Text style={styles.title}>Empresas que usam <Text style={styles.bold}>{tech}</Text></Text>
 
-            <FlatList 
+            <FlatList
             data={spots}
             style={styles.list}
             keyExtractor={spot => spot._id}
@@ -42,7 +42,7 @@ function SpotList({tech, navigation}) {
             renderItem={({item}) => (
 
                 <View style={styles.listItem}>
-                    <Image style={styles.thumbnail} source={{ uri: item.thumbnail_url.replace('localhost:3333', '8cacb6ab.ngrok.io') }}></Image>
+                    <Image style={styles.thumbnail} source={{ uri: item.thumbnail}}></Image>
                     <Text style={styles.company}>{item.company}</Text>
                     <Text style={styles.price}>{item.price ? `R$${item.price}` : 'GRATUITO'}</Text>
                     <TouchableOpacity onPress={() => handleNavigate(item._id)} style={styles.button}>
