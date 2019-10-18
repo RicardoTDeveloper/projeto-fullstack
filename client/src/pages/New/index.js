@@ -10,9 +10,9 @@ export default function New({ history }) {
     const [company, setCompany] = useState('');
     const [techs, setTechs] = useState('');
     const [price, setPrice] = useState('');
-
+    
     const [previewimg, setPreviewimg] = useState('');
-
+    
     // Image tratamento
     const preview = useMemo(() => {
 
@@ -73,7 +73,7 @@ export default function New({ history }) {
             <label htmlFor="company">EMPRESA *</label>
             <input
                 type="text"
-                placeholder="Sua empresa incrível"
+                placeholder="Nome da empresa"
                 value={company}
                 onChange={event => setCompany(event.target.value)}
             />
@@ -81,7 +81,7 @@ export default function New({ history }) {
             <label htmlFor="techs">TECNOLOGIAS * <span>(separadas por vírgulas)</span></label>
             <input
                 type="text"
-                placeholder="Quais tecnologias usam?"
+                placeholder="Exemplo: NodeJS, ReactJS"
                 value={techs}
                 onChange={event => setTechs(event.target.value)}
             />

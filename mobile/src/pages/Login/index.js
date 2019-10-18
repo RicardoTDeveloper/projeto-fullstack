@@ -19,8 +19,10 @@ export default function Login({ navigation }){
         })
     }, []);
 
-    async function handleSubmit() {
+    async function handleSubmit(event) {
         // email, techs
+        
+        console.log(event);
 
         const response = await api.post('/sessions', {
             email
@@ -51,7 +53,7 @@ export default function Login({ navigation }){
                 onChangeText={setEmail}
                 />
                 
-                <Text style={styles.label}>TECNOLOGIAS *</Text>
+                <Text style={styles.label}>TECNOLOGIAS * <Text style={styles.subtitulo}>(Exemplo: NodeJS, ReactJS)</Text></Text>
                 <TextInput 
                 style={styles.input}
                 placeholder="Tecnologias de interesse"
@@ -62,7 +64,7 @@ export default function Login({ navigation }){
                 onChangeText={setTechs}
                 />
 
-                <TouchableOpacity onPress={handleSubmit} style={styles.button}>
+                <TouchableOpacity onPress={event => handleSubmit(event)} style={styles.button}>
                     <Text style={styles.buttonText}>Encontrar Spots</Text>
                 </TouchableOpacity>
             </View>

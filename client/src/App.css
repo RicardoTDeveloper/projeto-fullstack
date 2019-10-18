@@ -37,6 +37,7 @@ body, input, button{
   margin-top: 50px;
   border-radius: 4px;
   padding: 30px;
+  margin-bottom: 60px;
 }
 
 .content > p {

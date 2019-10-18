@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
 import api from '../../services/api'
+import Downloadapk from '../components/downloadapk'
 
 
 export default function Login({history}) {
@@ -26,7 +27,6 @@ export default function Login({history}) {
         <form onSubmit={handleSubmit}>
           <label htmlFor="">E-mail</label>
           <input type="text" value={email} onChange={event => setEmail(event.target.value)} id="email" placeholder="Seu melhor e-mail"/>
-
 
           <button className="btn" type="submit">Entrar</button>
         </form>

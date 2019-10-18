@@ -1,0 +1,35 @@
+
+.flex-button{
+    position: absolute;
+    top: 25px;
+    right: 5%;
+    left: auto;
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+}
+
+.flex-button p {
+    color: #fff;
+    padding-right: 15px;
+}
+
+.flex-button a{
+    border: 0;
+    border-radius: 2px;
+    width: 100px;
+    padding: 12px;
+    font-size: 14px;
+    font-weight: bold;
+    background: #f05a5b;
+    color: #fff;
+    cursor: pointer;
+    text-decoration: none;
+    /* align-self: center; */
+}
+
+.flex-button a:hover{
+    background: #c43a3a;
+}
