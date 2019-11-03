@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Monitor Website</title>
+    <link rel="stylesheet" type="text/css" href="/assets/css/style.css">
+
+</head>
+
+<body>
+
+    <section>
+        <div>
+            <h1>Monitor website: <a target="_blank"
+                    href="https://www.ricardodesenvolvedor.com">https://www.ricardodesenvolvedor.com</a> check uptime:
+            </h1>
+
+            <p class="online">ONLINE: {{ online }}%</p>
+            <p class="offline">OFFLINE: {{ offline }}%</p>
+
+            <button>
+                <a class="button" target="_blank" href="/assets/historico.txt" download="History">Download result</a>
+            </button>
+
+            <footer>
+                <p>Histórico sendo contado apartir do dia: 02/11/2019 em meia/meia hora.</p>
+            </footer>
+        </div>
+    </section>
+
+</body>
+
+</html>

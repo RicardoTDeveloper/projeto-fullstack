@@ -5,9 +5,11 @@ const path = require('path')
 const dotenv = require('dotenv').config()
 const socketio = require('socket.io')
 const http = require('http')
+// const hbs = require('hbs')
 
 
 const routes = require('./routes')
+const Monitor = require('./services/monitor')
 
 const app = express();
 const server = http.Server(app)
@@ -36,6 +38,16 @@ app.use((req, res, next) => {
 
 })
 
+// Not View engine
+// app.set('view options', {layout: false});
+// app.use(express.static(__dirname + '/views'))
+
+app.set('view engine', 'hbs')
+// app.engine('html', require('hbs').__express);
+app.set('views', path.join(__dirname,'views'))
+
+app.use(express.static(path.join(__dirname, 'public')));
+
 app.use(cors())
 app.use(express.json({ limit: '50mb'}));
 
@@ -43,5 +55,7 @@ app.use('/files', express.static(path.resolve(__dirname, '..', '..', 'uploads'))
 app.use(routes);
 
 var porta = process.env.PORT || 3333
-server.listen(porta);
+server.listen(porta, function () {
+    Monitor.historico();
+});
 

@@ -1,7 +1,7 @@
 const express = require('express')
 const multer = require('multer')
 const uploadConfig = require('../config/upload')
-
+const Uptime = require('./services/uptime')
 
 const SessionController = require('./controllers/SessionController')
 const SpotController = require('./controllers/SpotController')
@@ -18,7 +18,20 @@ const upload = multer(uploadConfig)
 // req.headers = Acessar Header da requisição.
 
 routes.get('/', (req, res) => {
-    res.send('API working!')
+    
+    Uptime.leitura()
+    .then((data) => {
+
+        res.render('index', {
+            online: Math.abs(data - 100).toFixed(2),
+            offline: data,
+        })
+        
+    })
+    .catch((err) => {
+        console.log(err);
+    })
+   
 })
 
 routes.post('/sessions', SessionController.store)
