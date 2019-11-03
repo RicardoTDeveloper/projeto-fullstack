@@ -9,16 +9,14 @@ function leitura(){
             
              const result = data.split('https://www.ricardodesenvolvedor.com')
             //  console.log(result.length);
-
+            
              let uptime = {
                  online: 0,
                  offline: 0,
                  soma: function () {
                      return this.online + this.offline;
                  },
-                 set online(){
-                     // Apenas adicionei como para implementar mais tarde.
-                 }
+                // set online(){} Apenas adicionei como para implementar mais tarde.
              };
 
              result.map((valor,index,array) => {
@@ -28,12 +26,12 @@ function leitura(){
                     uptime.online++;
                  }
              });
-             
+
             //  let valortotal = (uptime.online + uptime.offline)
 
              let resultado = (uptime.offline * 100) / uptime.soma();
 
-            //  console.log(resultado.toFixed(2));
+             console.log(resultado.toFixed(2));
              resolve(resultado.toFixed(2)); 
              
         })

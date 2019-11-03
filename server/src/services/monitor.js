@@ -49,7 +49,7 @@ function historico() {
             // always executed
         });
 
-    }, 1800000)
+    }, 30000)
 
 }
 
