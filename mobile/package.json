@@ -22,7 +22,7 @@
     "babel-preset-expo": "^7.0.0",
     "metro": "^0.56.0",
     "metro-core": "^0.56.0",
-    "node-sass": "^4.12.0",
+    "node-sass": "^4.13.1",
     "react-native-sass-transformer": "^1.4.0"
   },
   "private": true
