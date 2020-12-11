@@ -2,7 +2,9 @@
 node_modules
 server/node_modules
 client/node_modules
+client/yarn.lock
 mobile/node_modules
+mobile/yarn.lock
 server/.env
 client/build
 client/src/pages/components/download
